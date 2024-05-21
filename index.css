@@ -1,0 +1,140 @@
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+	transition: all linear .3s;
+}
+h1{
+	font-size: 70px;
+	font-weight: 300;
+}
+h3{
+	font-size: 40px;
+	text-align: center;
+}
+
+/* h1::first-letter{
+	
+	font-weight: 300;
+	font-size: 60px;
+	text-transform: uppercase;
+} */
+
+.test{
+	color: #011245cc;
+}
+.abTxt::first-letter{
+	font-size: 35px;
+	font-family: "Jacquard 24";
+	/* list-style-type: */
+}
+.btn{
+	box-shadow: 0px 3px 0px rgb(2, 76, 142);
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.commonImg{
+	background-position-y: center;
+	background-position-x: 50%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.intCenter{
+	transform: translateY(-50%) translateX(-50%);
+}
+.btn:hover{
+	box-shadow: unset;
+	transform: translateY(3px);
+}
+
+.gameCard:hover{
+	box-shadow: unset;
+	transform: translateY(-15px);
+}
+.overlay{
+	opacity: 0;
+}
+.gameCard:hover .overlay
+{
+	opacity:1;
+	/* color: ; */
+}
+.aboutPage
+{
+	background-size:3000px 100%;
+	background-position-y:top;
+	background-position-x: 0%;
+	background-repeat: no-repeat;
+	margin-bottom: -3px;
+}
+.gamePage
+{
+	background-size:2000px 100%;
+	background-position-y:top;
+	background-position-x: 0%;
+	background-repeat: no-repeat;
+}
+.roadPage{
+	background-size:cover;
+	background-position:left top;
+	background-repeat: no-repeat;
+}
+.roadAnime{
+	animation: roadMove;
+	animation-timing-function: linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 10s;
+}
+.cloudLikeAnime{
+	animation: aboutMove;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 20s;
+}
+
+@keyframes roadMove{
+	0%{
+		background-position-x: 0%;
+	}
+	25%{
+		background-position-x: 50%;
+
+	}
+	50%{
+		background-position-x: 100%;
+	}
+	75%{
+		background-position-x: 50%;
+
+	}
+	100%{
+		background-position-x: 0%;
+	}
+}
+
+@keyframes aboutMove{
+	0%{
+		background-position-x:0%;
+	}
+	
+	50%{
+		background-position-x:100%;
+	}
+
+	100%{
+		background-position-x:0%;
+	}
+}
+
+@media screen and (max-width:500px) {
+	h1{
+		font-size: 50px;
+	}
+	h3{
+		font-size: 25px;
+	}
+}
